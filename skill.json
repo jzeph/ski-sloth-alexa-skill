@@ -1,0 +1,59 @@
+{
+  "manifest": {
+    "publishingInformation": {
+      "locales": {
+        "en-US": {
+          "summary": "Provides the current conditions for the Loppet Foundation cross-country ski trails in Minneapolis, MN.",
+          "examplePhrases": [
+            "Alexa, ask Ski Sloth what are the trail conditions",
+            "Alexa, ask Ski Sloth to give me a trail update",
+            "Alexa, ask Ski Sloth what the trails are like"
+          ],
+          "keywords": [
+            "Minneapolis",
+            "Minnesota",
+            "skiing",
+            "ski",
+            "cross-country",
+            "trails",
+            "snow"
+          ],
+          "name": "ski-sloth",
+          "description": "Want to know the ski trail conditions before heading out to Theodore Wirth Park? \nNeed to bring your rock skis or extra kick wax?\nSki Sloth has been out on the trails and knows all. Just say: Alexa, ask ski sloth for a trail update.\n\n\nSki Sloth was built and maintained by a volunteer not associated with the Loppet Foundation nor the Minneapolis Park and Recreation Board.",
+          "smallIconUri": "https://jzeph.gitlab.io/img/icon_108_A2Z.png",
+          "largeIconUri": "https://jzeph.gitlab.io/img/icon_512_A2Z.png"
+        }
+      },
+      "isAvailableWorldwide": true,
+      "testingInstructions": "No special instructions.",
+      "category": "EXERCISE_AND_WORKOUT",
+      "distributionCountries": []
+    },
+    "apis": {
+      "custom": {
+        "endpoint": {
+          "sourceDir": "lambda/custom"
+        }, 
+        "interfaces": [
+          {
+            "type": "ALEXA_PRESENTATION_APL"
+          }
+        ]
+      }
+    },
+    "manifestVersion": "1.0",
+    "privacyAndCompliance": {
+      "allowsPurchases": false,
+      "locales": {
+        "en-US": {
+          "termsOfUseUrl": "https://jzeph.gitlab.io/post/alexa-terms-of-use/",
+          "privacyPolicyUrl": "https://jzeph.gitlab.io/post/alexa-privacy-policy/"
+        }
+      },
+      "isExportCompliant": true,
+      "containsAds": false,
+      "isChildDirected": false,
+      "usesPersonalInfo": false
+    }
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "interactionModel": {
+      "languageModel": {
+          "invocationName": "ski sloth",
+          "intents": [
+              {
+                  "name": "AMAZON.CancelIntent",
+                  "samples": []
+              },
+              {
+                  "name": "AMAZON.HelpIntent",
+                  "samples": []
+              },
+              {
+                  "name": "AMAZON.StopIntent",
+                  "samples": []
+              },
+              {
+                  "name": "AMAZON.FallbackIntent",
+                  "samples": []
+              },
+              {
+                  "name": "AMAZON.YesIntent",
+                  "samples": []
+              },
+              {
+                  "name": "AMAZON.NoIntent",
+                  "samples": []
+              },
+              {
+                  "name": "GetTrailStatusIntent",
+                  "slots": [],
+                  "samples": [
+                      "what are the current trail conditions",
+                      "latest trail conditions",
+                      "what are the trails like",
+                      "what the trails are like",
+                      "how are the trails",
+                      "tell me about the trails",
+                      "what are the trail conditions",
+                      "trail conditions",
+                      "trail update",
+                      "give me a trail update"
+                  ]
+              },
+              {
+                  "name": "AMAZON.NavigateHomeIntent",
+                  "samples": []
+              }
+          ],
+          "types": []
+      }
+  }
+}
