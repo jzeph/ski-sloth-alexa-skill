@@ -10,6 +10,9 @@ Unfortunately, the effects of climate change can have a negative impact on our w
 
 This Alexa skill makes it easy to get the latest conditions for the snow-making trails at Theodore Wirth Park. In addition, this skill uses Alexa Presentation Language to display the current trail webcam image, allowing the latest trail conditions to be shown on many different devices. 
 
+## Code
+This project uses cheeriojs to scrape and parse the trail condition info from the Minneapolis Parks website. It also uses the Alexa Presentation Language to show the latest jpg image from the webcam server at the trail timing building. 
+
 
 ### Disclaimer
 I built the Ski Sloth project myself as a volunteer and this project is not associated with the Loppet Foundation nor the Minneapolis Park and Recreation Board.
