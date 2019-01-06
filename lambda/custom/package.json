@@ -9,8 +9,8 @@
   "author": "jzeph",
   "license": "ISC",
   "dependencies": {
-    "ask-sdk-core": "^2.0.0",
-    "ask-sdk-model": "^1.0.0",
+    "ask-sdk-core": "^2.3.0",
+    "ask-sdk-model": "^1.11.1",
     "axios": "^0.18.0",
     "cheerio": "^1.0.0-rc.2"
   }

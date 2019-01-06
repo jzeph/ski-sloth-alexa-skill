@@ -68,7 +68,9 @@ const getTrailConditions = async url => {
       const trailConditions = await getTrailConditions(url);
       const outputSpeech = `Here is the ${trailConditions.snowmakingTrails} update from ${trailConditions.lastUpdated}. ${trailConditions.snowmakingStatus[0]} Would you like more details?`; 
 
-      return handlerInput.responseBuilder
+      if(supportsAPL(handlerInput))
+      {
+        return handlerInput.responseBuilder
         .speak(outputSpeech)
         .reprompt(outputSpeech)
         .addDirective({
@@ -78,6 +80,14 @@ const getTrailConditions = async url => {
           datasources: {}
         })
         .getResponse();
+      }
+      else
+      {
+        return handlerInput.responseBuilder
+        .speak(outputSpeech)
+        .reprompt(outputSpeech)
+        .getResponse();
+      }  
     },
   };
 
@@ -92,7 +102,9 @@ const YesHandler = {
     //const outputSpeech = `${trailConditions.snowmakingStatus[1]} ${trailConditions.snowmakingStatus[2]} Enjoy your ski!`;
     const outputSpeech = `${trailConditions.snowmakingStatus[1]} Enjoy your ski!`;
 
-    return handlerInput.responseBuilder
+    if(supportsAPL(handlerInput))
+    {
+      return handlerInput.responseBuilder
       .speak(outputSpeech)
       .addDirective({
         type: 'Alexa.Presentation.APL.RenderDocument',
@@ -101,6 +113,13 @@ const YesHandler = {
         datasources: {}
       })
       .getResponse();
+    }
+    else
+    {
+      return handlerInput.responseBuilder
+      .speak(outputSpeech)
+      .getResponse();
+    }
   },
 };
 
@@ -178,6 +197,17 @@ const ErrorHandler = {
       .getResponse();
   },
 };
+
+
+function supportsAPL(handlerInput) {
+  const supportedInterfaces = handlerInput.requestEnvelope.context.System.device.supportedInterfaces;
+  const aplInterface = supportedInterfaces['Alexa.Presentation.APL'];
+  return aplInterface != null && aplInterface != undefined;
+}
+
+
+
+
 
 const skillBuilder = Alexa.SkillBuilders.custom();
 
