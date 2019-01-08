@@ -2,8 +2,9 @@
 This skill provides the current conditions for the Loppet Foundation cross-country ski trails in Minneapolis, MN.
 
 ## Devpost Amazon Alexa Skills Challenge
-This project is my entry to the Devpost Alexa Multimodal Hackathon
-Devpost entry video is at https://youtu.be/fUJPJYfwNNo
+This project is my entry to the Devpost Alexa Multimodal Hackathon.  
+``#AmazonAlexaMultimodalChallenge  
+Devpost entry video is at https://youtu.be/fUJPJYfwNNo  
 
 ## Why Ski Sloth?
 People in Minneapolis, Minnesota love to embrace winter.  #boldnorth!
