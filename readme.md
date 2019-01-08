@@ -3,7 +3,7 @@ This skill provides the current conditions for the Loppet Foundation cross-count
 
 ## Devpost Amazon Alexa Skills Challenge
 This project is my entry to the Devpost Alexa Multimodal Hackathon.  
-``#AmazonAlexaMultimodalChallenge  
+`#AmazonAlexaMultimodalChallenge  
 Devpost entry video is at https://youtu.be/fUJPJYfwNNo  
 
 ## Why Ski Sloth?
