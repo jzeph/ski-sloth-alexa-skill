@@ -1,43 +1,76 @@
 {
-  "type": "APL",
-  "version": "1.0",
-  "import": [
-    {
-        "name": "alexa-viewport-profiles",
-        "version": "1.0.0"
-    }
-  ],
-  "mainTemplate": {
-    "parameters": [
-        "datasource"
-    ],
-    "item": [
+    "type": "APL",
+    "version": "1.0",
+    "theme": "dark",
+    "import": [
         {
-            "type": "Container",
-            "direction": "row",
-            "width": "100vw",
-            "height": "100vh",
-            "alignItems": "center",
-            "justifyContent": "center",
-            "items": [
-                {
-                    "type": "Image",
-                    "source": "http://webcam.cityoflakesloppet.com/timingbldg/current_image.jpg",
-                    "position": "absolute",
-                    "width": "100vw",
-                    "height": "100vh",
-                    "scale": "best-fill"
-                },
-                {
-                    "type": "Text",
-                    "text": "Loppet Trail Webcam:\nCurrent Conditions",
-                    "color": "#ffffff",
-                    "width": "50vw",
-                    "fontSize": "4vw",
-                    "textAlign": "center",
-                    "textAlignVertical": "top"
-                }
-            ]
+           "name": "alexa-viewport-profiles",
+            "version": "1.0.0"
         }
-    ]    
-}}
+    ],
+    "resources": [],
+    "styles": {},
+    "layouts": {},
+    "mainTemplate": {
+        "items": [
+            {
+               "type": "Frame",
+               "height": "100vh",
+               "width": "100vw",
+               "items": [
+                   {
+                        "when": "${@viewportProfile == @hubRoundSmall}",
+                        "type": "Container",
+                        "direction": "column",
+                        "items": [
+                            {
+                                "type": "Text",
+                                "textAlign": "center",
+                                "textAlignVertical": "bottom",
+                                "text": "\nLoppet Trail\nWebcam",
+                                "lineHeight": 1,
+                                "fontWeight": "100"
+                            },
+                            {
+                                "type": "Image",
+                                "source": "http://webcam.cityoflakesloppet.com/timingbldg/current_image.jpg",
+                                "align": "center",
+                                "width": "100vw",
+                                "height": "95vh",
+                                "scale": "best-fit-down"
+                            }
+                        ]
+                  },
+                  {
+                       "when": "${@viewportProfile == @hubLandscapeMedium || @viewportProfile == @hubLandscapeLarge || @viewportProfile == @tvLandscapeXLarge}",
+                        "type": "Container",
+                        "direction": "row",
+                        "width": "100vw",
+                        "height": "100vh",
+                        "alignItems": "center",
+                        "justifyContent": "center",
+                        "items": [
+                            {
+                                "type": "Image",
+                                "source": "http://webcam.cityoflakesloppet.com/timingbldg/current_image.jpg",
+                                "position": "absolute",
+                                "width": "100vw",
+                                "height": "100vh",
+                                "scale": "best-fit"
+                            },
+                            {
+                                "type": "Text",
+                                "text": "Loppet Trail Webcam:\nCurrent Conditions",
+                                "color": "#ffffff",
+                                "width": "50vw",
+                                "fontSize": "4vw",
+                                "textAlign": "center",
+                                "textAlignVertical": "top"
+                            }
+                        ]
+                  }
+                ]
+            }
+        ]
+    }
+}
