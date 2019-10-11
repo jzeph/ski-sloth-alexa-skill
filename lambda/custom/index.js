@@ -34,7 +34,7 @@ const getTrailConditions = async url => {
         }
 
         // Get the status update for snowmaking trails
-        const snowmakingTrails = ['Hap Snowmaking Loop'];
+        const snowmakingTrails = ['Hap Snowmaking'];
         const snowmakingStatus = [];
 
         $("p span:contains('"+snowmakingTrails+"')").each(function(){
